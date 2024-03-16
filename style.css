@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Inter;
+  src: url(assets/fonts/Inter-VariableFont_slntwght.ttf);
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  /* colors and implementation */
+  --clr-primary-hsl: hsl(75, 94%, 57%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-pure-100: 0, 0%, 100%;
+  --clr-neutral-400: hsl(0, 0%, 20%);
+  --clr-neutral-500: hsl(0, 0%, 12%);
+  --clr-neutral-700: hsl(0, 0%, 8%);
+
+  /* font */
+  --ff-default: Inter;
+  --fw-normal: 400;
+  --fw-semi: 600;
+  --fw-bold: 700;
+
+  --fs-300: 0.5rem;
+  --fs-400: 0.625rem;
+  --fs-500: 0.75rem;
+
+  --fs-700: 1.25rem;
+}
+
+body {
+  font-family: var(--ff-default);
+  background: var(--clr-neutral-700);
+  color: var(--clr-neutral-100);
+
+  grid-template-columns: 1fr;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.section {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--clr-neutral-500);
+  text-align: center;
+  display: grid;
+
+  gap: 1.5rem;
+}
+
+.avatar-image img {
+  margin-inline: auto;
+  border-radius: 50%;
+  width: 40%;
+  height: auto;
+}
+
+.section-header {
+  display: grid;
+  gap: 0.5rem;
+}
+.section-title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+}
+.section-country {
+  color: var(--clr-primary-hsl);
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-500);
+}
+
+.section-info p {
+  color: hsl(var(--clr-neutral-pure-100), 0.5);
+  font-size: var(--fs-500);
+}
+
+.section-contacts {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact {
+  color: hsl(var(--clr-neutral-pure-100), 0.7);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  background: var(--clr-neutral-400);
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.contact:hover,
+.contact:focus-visible {
+  color: var(--clr-neutral-700);
+  background: var(--clr-primary-hsl);
+}
+
+@media (min-width: 600px) {
+  .section {
+    grid-template-columns: 17em;
+  }
+}
